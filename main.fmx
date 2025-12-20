@@ -1,0 +1,45 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Value1Edit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Position.X = 104.00000000000000000
+    Position.Y = 48.00000000000000000
+  end
+  object Value2Edit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    Position.X = 280.00000000000000000
+    Position.Y = 48.00000000000000000
+  end
+  object Value3Edit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 3
+    Position.X = 456.00000000000000000
+    Position.Y = 48.00000000000000000
+  end
+  object GoButton: TButton
+    Position.X = 280.00000000000000000
+    Position.Y = 280.00000000000000000
+    TabOrder = 5
+    Text = #1055#1097'!'
+    TextSettings.Trimming = None
+    OnClick = GoButtonClick
+  end
+  object Go1Button: TButton
+    Position.X = 416.00000000000000000
+    Position.Y = 352.00000000000000000
+    TabOrder = 4
+    Text = #1055#1097'! '#1055#1097#1097'!'
+    TextSettings.Trimming = None
+    OnClick = Go1ButtonClick
+  end
+end

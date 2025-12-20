@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/12/05 23:40:09.000.037,=C:\Users\someuser\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/12/05 23:40:57.000.545,C:\projects\delphi\StraDat\stradatmain.fmx=C:\Users\someuser\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2025/12/05 23:40:57.000.545,C:\projects\delphi\StraDat\stradatmain.pas=C:\Users\someuser\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/12/05 23:41:07.000.775,C:\projects\delphi\StraDat\stradat.dproj=C:\Users\someuser\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2025/12/05 23:42:57.000.623,C:\projects\delphi\StraDat\stradatmain.pas=</Transaction>
+    <Transaction>2025/12/05 23:43:56.000.141,=C:\projects\delphi\StraDat\main.pas</Transaction>
+    <Transaction>2025/12/05 23:45:07.000.204,=C:\projects\delphi\StraDat\StraDat.pas</Transaction>
+    <Transaction>2025/12/06 00:52:26.000.351,=C:\projects\delphi\StraDat\ModelSupport_stradat\default.txaPackage</Transaction>
+    <Transaction>2025/12/06 00:53:57.000.240,C:\projects\delphi\StraDat\ModelSupport_stradat\default.txaPackage=</Transaction>
+    <Transaction>2025/12/06 00:57:04.000.891,=C:\projects\delphi\StraDat\ModelSupport_stradat\main\default.txaPackage</Transaction>
+    <Transaction>2025/12/06 00:57:04.000.954,=C:\projects\delphi\StraDat\ModelSupport_stradat\StraDat\default.txaPackage</Transaction>
+    <Transaction>2025/12/06 00:57:04.000.844,=C:\projects\delphi\StraDat\ModelSupport_stradat\default.txvpck</Transaction>
+    <Transaction>2025/12/06 00:57:04.000.538,C:\projects\delphi\StraDat\stradat.dproj=C:\projects\delphi\StraDat\stradat.dproj</Transaction>
+    <Transaction>2025/12/12 03:08:18.000.110,=C:\projects\delphi\StraDat\StraDat.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="ModelSupport_stradat"/>
+    <File Path="ModelSupport_stradat\main"/>
+    <File Path="ModelSupport_stradat\main\default.txaPackage"/>
+    <File Path="ModelSupport_stradat\StraDat"/>
+    <File Path="ModelSupport_stradat\StraDat\default.txaPackage"/>
+    <File Path="ModelSupport_stradat\default.txvpck"/>
+    <File Path="main.pas"/>
+    <File Path="StraDat.pas"/>
+  </ProjectSortOrder>
+</BorlandProject>
