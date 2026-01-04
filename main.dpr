@@ -4,7 +4,8 @@ uses
   System.StartUpCopy,
   main in 'main.pas',
   FMX.Forms,
-  StraDat in 'StraDat.pas';
+  StraDat in 'StraDat.pas',
+  Sort in 'Sort.pas';
 
 //{$R *.res}
 

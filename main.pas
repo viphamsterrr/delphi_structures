@@ -5,7 +5,8 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
-  FMX.Controls.Presentation, FMX.Edit, StraDat, Generics.Collections;
+  FMX.Controls.Presentation, FMX.Edit, StraDat, Sort, Generics.Collections,
+  Generics.Defaults;
 
 type
   TForm1 = class(TForm)
@@ -22,6 +23,16 @@ type
     { Public declarations }
   end;
 
+type
+  IntCom = Class (TInterfacedObject, IComparable, IComparable<IntCom>)
+
+  public
+    value: integer;
+  public
+    function CompareTo(obj: TObject): integer; overload;
+    function CompareTo(second: IntCom): integer; overload;
+  end;
+
 var
   Form1: TForm1;
 
@@ -29,24 +40,49 @@ implementation
 
 {$R *.fmx}
 
-procedure TForm1.Go1ButtonClick(Sender: TObject);
-var s: RandStack<int64>;
-    i, j: int64;
+function IntCom.CompareTo(obj: TObject): integer;
+var second: IntCom;
 begin
-  s:= RandStack<Int64>.Create(7);
-  s.put(9);
-  s.put(-6);
-  s.put(22);
-  s.put(-5);
-  for i:= 17 to 199
+  second:= obj as IntCom;
+  if self.value > second.value then result:= 1
+  else if self.value < second.value then result:= - 1
+       else result:= 0
+end;
+
+function IntCom.CompareTo(second: IntCom): integer;
+begin
+  if self.value > second.value then result:= 1
+  else if self.value < second.value then result:= - 1
+       else result:= 0
+end;
+
+procedure TForm1.Go1ButtonClick(Sender: TObject);
+var s: TArray<IntCom>;
+    i: int64;
+    rf, rs: string;
+    sorting: Shell<IntCom>;
+    d: IntCom;
+begin
+  SetLength(s, 30);
+  for i:= 0 to 29
   do
-    if i mod 4 = 0
-    then
-      s.put(i);
-//  for i in s do ShowMessage(i.ToString);
-  while not s.isEmpty
+  begin
+    s[i]:= IntCom.Create;
+    s[i].value:= Random(99);
+  end;
+  rf:= '';
+  rs:= '';
+  for i:= 0 to 29
   do
-    showmessage(s.take.ToString)
+    rf:= rf + s[i].value.ToString + ' ';
+  sorting:= Shell<IntCom>.Create;
+  sorting.sort(s, true);
+  rs:= '';
+  for d in s
+  do
+    rs:= rs + d.value.ToString + ' ';
+  ShowMessage(rf);
+  ShowMessage(rs)
 end;
 
 procedure TForm1.GoButtonClick(Sender: TObject);

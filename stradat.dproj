@@ -300,6 +300,7 @@
         </DelphiCompile>
         <DCCReference Include="main.pas"/>
         <DCCReference Include="StraDat.pas"/>
+        <DCCReference Include="Sort.pas"/>
         <None Include="ModelSupport_stradat\default.txvpck"/>
         <None Include="ModelSupport_stradat\main\default.txaPackage"/>
         <None Include="ModelSupport_stradat\StraDat\default.txaPackage"/>
