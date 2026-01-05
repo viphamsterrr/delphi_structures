@@ -60,7 +60,7 @@ procedure TForm1.Go1ButtonClick(Sender: TObject);
 var s: TArray<IntCom>;
     i: int64;
     rf, rs: string;
-    sorting: Shell<IntCom>;
+    sorting: Merge<IntCom>;
     d: IntCom;
 begin
   SetLength(s, 30);
@@ -75,8 +75,8 @@ begin
   for i:= 0 to 29
   do
     rf:= rf + s[i].value.ToString + ' ';
-  sorting:= Shell<IntCom>.Create;
-  sorting.sort(s, true);
+  sorting:= Merge<IntCom>.Create;
+  sorting.sort(s);
   rs:= '';
   for d in s
   do
